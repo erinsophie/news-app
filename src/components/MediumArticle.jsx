@@ -15,7 +15,7 @@ function MediumArticle({ article }) {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline"
+          className="hover:underline font-bold"
         >
           {article.title}
         </a>

@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
-import Error from './Error';
+import Error from '../pages/Error';
 import News from '../pages/News';
+import SearchResults from '../pages/SearchResults';
 
 function Router() {
   const router = createBrowserRouter([
@@ -12,6 +13,10 @@ function Router() {
         {
           index: true,
           element: <News />,
+        },
+        {
+          path: '/search',
+          element: <SearchResults />,
         },
         {
           path: '/:category',
