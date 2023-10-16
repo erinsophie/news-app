@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
-
+import App from '../App';
 import Error from './Error';
 
 function Router() {
@@ -8,20 +7,7 @@ function Router() {
     {
       path: '/',
       element: <App />,
-      children: [
-        {
-          index: true,
-          element: <News />,
-        },
-        {
-          path: '/search',
-          element: <SearchResults />,
-        },
-        {
-          path: '/:category',
-          element: <News />,
-        },
-      ],
+      children: [],
       errorElement: <Error />,
     },
   ]);
