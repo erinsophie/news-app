@@ -30,7 +30,7 @@ function Header() {
   }, [location.pathname]);
 
   return (
-    <header className="text-sm flex flex-col gap-3 p-2 border-b border-gray-300 mb-10">
+    <header className="bg-[#FFCE36] text-sm flex flex-col gap-3 p-4 mb-10">
       <h1 className="md:text-2xl">NewsDaily</h1>
 
       <div className="flex flex-col justify-between md:flex-row">
