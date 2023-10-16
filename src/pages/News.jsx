@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import MiniArticle from './MiniArticle';
-import MediumArticle from './MediumArticle';
-import TextArticle from './TextArticle';
+import MiniArticle from '../components/MiniArticle'
+import MediumArticle from '../components/MediumArticle';
+import TextArticle from '../components/TextArticle';
 
 function News() {
   // category

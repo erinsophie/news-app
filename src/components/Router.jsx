@@ -13,6 +13,10 @@ function Router() {
           index: true,
           element: <News />,
         },
+        {
+          path: '/:category',
+          element: <News />,
+        },
       ],
       errorElement: <Error />,
     },
