@@ -2,7 +2,7 @@
 
 ## [Live Demo](http://news-app-erinsophie.netlify.app)
 
-![Sports page](./client/public/img/sports-page.png)
+![Sports page](./public/img/sports-page.png)
 
 ## Technologies
 
