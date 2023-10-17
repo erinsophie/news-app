@@ -4,7 +4,11 @@ function MiniArticle({ article }) {
   return (
     <div className="flex gap-3">
       <div className="min-h-[120px] max-h-[120px] max-w-[190px] min-w-[190px] overflow-hidden rounded-lg">
-        <img src={article.image} className="object-cover w-full h-full"></img>
+        <img
+          src={article.image}
+          alt="mini article image"
+          className="object-cover w-full h-full"
+        ></img>
       </div>
       <div>
         <p className="text-sm md:text-base text-gray-400">
