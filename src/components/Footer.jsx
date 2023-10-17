@@ -4,6 +4,7 @@ function Footer() {
       <p>erinsophie</p>
       <a
         href="https://github.com/erinsophie"
+        aria-label="link to GitHub page"
         target="_blank"
         rel="noopener noreferrer"
       >

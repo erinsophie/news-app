@@ -106,6 +106,9 @@ function Header() {
               </div>
               <button
                 className="block md:hidden"
+                aria-label={`${
+                  isOpen ? 'close menu button' : 'open menu button'
+                }`}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <i
@@ -151,6 +154,9 @@ function Header() {
         </div>
 
         <form className="flex gap-2 items-center">
+          <label htmlFor="searchInput" className="sr-only">
+            Search
+          </label>
           <input
             type="search"
             value={searchParams.get('query') || ''}
@@ -159,10 +165,9 @@ function Header() {
             className="p-1 rounded-lg"
           ></input>
 
-          <i
-            onClick={handleSearch}
-            className="fa-solid fa-magnifying-glass text-base cursor-pointer"
-          ></i>
+          <button onClick={handleSearch} aria-label="search button">
+            <i className="fa-solid fa-magnifying-glass text-base cursor-pointer"></i>
+          </button>
         </form>
       </div>
     </header>
