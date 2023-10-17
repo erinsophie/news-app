@@ -1,8 +1,28 @@
-# React + Vite
+# News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [Live Demo](http://news-app-erinsophie.netlify.app)
 
-Currently, two official plugins are available:
+![Sports page](./client/public/img/sports-page.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+
+- React
+- TailwindCSS
+- CurrentsAPI
+- OpenWeatherAPI
+- GeolocationAPI
+
+## Goal
+
+To create an app that allows users to browse the latest news articles.
+
+## Features
+
+- Fetches the latest news articles using the CurrentsAPI
+- The home page displays general world news while categories show category specific articles
+- Articles are filtered to only show those which have images 
+- Clicking the links will take users to the real article
+- A search feature is enabled that will allow users to find articles by keyword 
+- If the user allows the browser to access their geolocation they will see the weather conditions specific to their area through the use of the GeolocationAPI and the OpenWeatherAPI
+
+
