@@ -19,7 +19,7 @@ function SearchResults() {
     async function fetchNews() {
       try {
         const response = await fetch(
-          `https://api.currentsapi.services/v1/search?keywords=${searchTerm}&language=en&apiKey=${API_KEY}`
+          `https://api.currentsapi.services/v1/search?keywords=${searchTerm}&language=en&apiKey=${API_KEY}`,
         );
 
         if (!response.ok) {
@@ -49,7 +49,7 @@ function SearchResults() {
   if (error) return <p>{`Error: ${error}`}</p>;
 
   return (
-    <div className="flex-1">
+    <main className="flex-1">
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -66,7 +66,7 @@ function SearchResults() {
           </div>
         </>
       )}
-    </div>
+    </main>
   );
 }
 

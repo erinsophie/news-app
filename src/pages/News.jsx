@@ -54,7 +54,7 @@ function News() {
   const topArticle = articles[0];
 
   return (
-    <div className="flex-1 flex flex-col gap-10">
+    <main className="flex-1 flex flex-col gap-10">
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -99,7 +99,7 @@ function News() {
           </div>
         </>
       )}
-    </div>
+    </main>
   );
 }
 

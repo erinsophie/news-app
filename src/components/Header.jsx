@@ -48,7 +48,8 @@ function Header() {
   }, [location.pathname]);
 
   // naviagte to search page when clicked and not empty
-  function handleSearch() {
+  function handleSearch(e) {
+    e.preventDefault();
     const query = searchParams.get('query');
     if (query && query.trim() !== '') {
       navigate(`/search?query=${query}`);
@@ -153,19 +154,20 @@ function Header() {
           </Link>
         </div>
 
-        <form className="flex gap-2 items-center">
+        <form className="flex gap-2 items-center" onSubmit={handleSearch}>
           <label htmlFor="searchInput" className="sr-only">
             Search
           </label>
           <input
             type="search"
+            id="searchInput"
             value={searchParams.get('query') || ''}
             onChange={(e) => setSearchParams({ query: e.target.value })}
             placeholder="Search..."
             className="p-1 rounded-lg"
           ></input>
 
-          <button onClick={handleSearch} aria-label="search button">
+          <button aria-label="search button">
             <i className="fa-solid fa-magnifying-glass text-base cursor-pointer"></i>
           </button>
         </form>
