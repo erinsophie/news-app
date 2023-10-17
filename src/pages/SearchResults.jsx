@@ -12,12 +12,14 @@ function SearchResults() {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // api key
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
   useEffect(() => {
     async function fetchNews() {
       try {
         const response = await fetch(
-          `https://api.currentsapi.services/v1/search?keywords=${searchTerm}&language=en&apiKey=2WCKCF6ZlIHG8XbbQZVKa3QMjWohGS1yHT2pVQNTRij56wDd`,
+          `https://api.currentsapi.services/v1/search?keywords=${searchTerm}&language=en&apiKey=${API_KEY}`
         );
 
         if (!response.ok) {

@@ -20,6 +20,8 @@ function Header() {
   const navigate = useNavigate();
   // mobile menu
   const [isOpen, setIsOpen] = useState(false);
+  // api key
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   // for visual indication
   useEffect(() => {
@@ -63,7 +65,7 @@ function Header() {
             const longitude = position.coords.longitude;
 
             const response = await fetch(
-              `https://api.weatherapi.com/v1/current.json?key=8496bc66c37e43b1a0f180756231805&q=${latitude},${longitude}`,
+              `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${latitude},${longitude}`,
             );
 
             const data = await response.json();

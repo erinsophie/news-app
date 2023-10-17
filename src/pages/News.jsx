@@ -11,6 +11,8 @@ function News() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // api key
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
   useEffect(() => {
     async function fetchNews() {
@@ -18,7 +20,7 @@ function News() {
         const response = await fetch(
           `https://api.currentsapi.services/v1/latest-news?category=${
             category || 'world'
-          }&apiKey=2WCKCF6ZlIHG8XbbQZVKa3QMjWohGS1yHT2pVQNTRij56wDd`,
+          }&apiKey=${API_KEY}`,
         );
 
         if (!response.ok) {
