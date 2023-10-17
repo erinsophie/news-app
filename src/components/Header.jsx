@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { formatDate } from '../utils/utils';
+import MobileMenu from '../components/MobileMenu';
 
 function Header() {
   // weather data
@@ -17,6 +18,8 @@ function Header() {
   const [selectedTab, setSelectedTab] = useState('news');
   const location = useLocation();
   const navigate = useNavigate();
+  // mobile menu
+  const [isOpen, setIsOpen] = useState(false);
 
   // for visual indication
   useEffect(() => {
@@ -80,10 +83,9 @@ function Header() {
   }, []);
 
   if (error) return <p>{`Error: ${error}`}</p>;
-  console.log('weather:', weatherData);
 
   return (
-    <header className="bg-[#FFCE36] text-sm flex flex-col gap-3 p-4 mb-10">
+    <header className="relative bg-[#FFCE36] text-sm flex flex-col gap-3 p-4 mb-10">
       <div className="flex justify-between">
         <h1 className="md:text-2xl">
           News<span className="font-bold">Daily</span>
@@ -92,19 +94,31 @@ function Header() {
           <p>Loading...</p>
         ) : (
           weatherData && (
-            <div className='text-end'>
-              <p className='text-base md:text-xl'>{weatherData.current.temp_c}°C</p>
-              <div className="flex flex-col text-sm md:text-base">
+            <div className="text-end flex gap-2 md:flex-col">
+              <p className="text-base md:text-xl">
+                {weatherData.current.temp_c}°C
+              </p>
+              <div className="hidden md:block flex flex-col text-sm md:text-base">
                 <p>{weatherData.location.name}</p>
                 <p>{formatDate(weatherData.location.localtime)}</p>
               </div>
+              <button
+                className="block md:hidden"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <i
+                  className={`fa-solid fa-${isOpen ? 'times' : 'bars'} text-lg`}
+                ></i>
+              </button>
             </div>
           )
         )}
       </div>
 
-      <div className="flex flex-col justify-between md:flex-row">
-        <div className="flex gap-6 lg:gap-10">
+      {isOpen && <MobileMenu selectedTab={selectedTab} />}
+
+      <div className="flex justify-between">
+        <div className="hidden md:flex md:gap-3 lg:gap-10">
           <Link to="/" className={selectedTab === 'news' ? 'underline' : ''}>
             News
           </Link>

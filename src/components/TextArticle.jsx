@@ -4,7 +4,7 @@ function TextArticle({ article }) {
   return (
     <div className="flex flex-col gap-3">
       <div>
-        <p className="text-gray-400">
+        <p className="text-sm md:text-base text-gray-400">
           Published {formatDate(article.published)}
         </p>
         <p>{article.author}</p>
@@ -12,7 +12,7 @@ function TextArticle({ article }) {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-xl font-bold"
+          className="hover:underline text-base md:text-xl font-bold"
         >
           {article.title}
         </a>

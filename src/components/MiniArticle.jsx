@@ -7,7 +7,7 @@ function MiniArticle({ article }) {
         <img src={article.image} className="object-cover w-full h-full"></img>
       </div>
       <div>
-        <p className="text-gray-400">
+        <p className="text-sm md:text-base text-gray-400">
           Published {formatDate(article.published)}
         </p>
         <p>{article.author}</p>
@@ -15,7 +15,7 @@ function MiniArticle({ article }) {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline font-bold"
+          className="hover:underline font-bold text-sm md:text-base"
         >
           {article.title}
         </a>
