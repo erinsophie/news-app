@@ -6,7 +6,7 @@ function MiniArticle({ article }) {
       <div className="min-h-[120px] max-h-[120px] max-w-[190px] min-w-[190px] overflow-hidden rounded-lg">
         <img
           src={article.image}
-          alt="mini article image"
+          alt="Placeholder for article content"
           className="object-cover w-full h-full"
         ></img>
       </div>

@@ -64,7 +64,7 @@ function News() {
               <div className="flex-1 w-full max-h-[400px] h-[100px] w-[300px] md:max-w-[620px] md:min-w-[620px] overflow-hidden relative rounded-lg">
                 <img
                   src={topArticle.image}
-                  alt='top article image'
+                  alt="Placeholder for article content"
                   className="object-cover w-full h-full"
                 ></img>
                 <a

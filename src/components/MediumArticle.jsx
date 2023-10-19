@@ -6,7 +6,7 @@ function MediumArticle({ article }) {
       <div className="flex-1 max-h-[500px] md:max-w-[400px] md:min-w-[400px] overflow-hidden rounded-lg">
         <img
           src={article.image}
-          alt="medium article image"
+          alt="Placeholder for article content"
           className="object-cover w-full h-full"
         ></img>
       </div>
