@@ -2,16 +2,16 @@ import { formatDate } from '../utils/utils';
 
 function MediumArticle({ article }) {
   return (
-    <div className="flex flex-col gap-3">
+    <article className="flex flex-col gap-3">
       <div className="flex-1 max-h-[500px] md:max-w-[400px] md:min-w-[400px] overflow-hidden rounded-lg">
         <img
           src={article.image}
-          alt="Placeholder for article content"
+          alt=""
           className="object-cover w-full h-full"
         ></img>
       </div>
       <div>
-        <p className="text-gray-400">
+        <p className="text-gray-500">
           Published {formatDate(article.published)}
         </p>
         <p>{article.author}</p>
@@ -24,7 +24,7 @@ function MediumArticle({ article }) {
           {article.title}
         </a>
       </div>
-    </div>
+    </article>
   );
 }
 

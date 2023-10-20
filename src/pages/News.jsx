@@ -60,11 +60,11 @@ function News() {
       ) : (
         <>
           <div className="flex flex-col gap-5 lg:flex-row">
-            <div className="flex flex-col gap-3">
+            <article className="flex flex-col gap-3">
               <div className="flex-1 w-full max-h-[400px] h-[100px] w-[300px] md:max-w-[620px] md:min-w-[620px] overflow-hidden relative rounded-lg">
                 <img
                   src={topArticle.image}
-                  alt="Placeholder for article content"
+                  alt=""
                   className="object-cover w-full h-full"
                 ></img>
                 <a
@@ -76,7 +76,7 @@ function News() {
                   {topArticle.title}
                 </a>
               </div>
-            </div>
+            </article>
 
             <div className="flex flex-col gap-5">
               <MiniArticle article={articles[1]} />

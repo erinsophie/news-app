@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="flex gap-3 pr-5 p-2 items-center justify-end text-gray-400">
+    <footer className="flex gap-3 pr-5 p-2 items-center justify-end text-gray-600">
       <p>erinsophie</p>
       <a
         href="https://github.com/erinsophie"

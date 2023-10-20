@@ -107,9 +107,8 @@ function Header() {
               </div>
               <button
                 className="block md:hidden"
-                aria-label={`${
-                  isOpen ? 'close menu button' : 'open menu button'
-                }`}
+                aria-label="Toggle navigation menu"
+                aria-expanded={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <i
@@ -124,7 +123,7 @@ function Header() {
       {isOpen && <MobileMenu selectedTab={selectedTab} />}
 
       <div className="flex justify-between">
-        <div className="hidden md:flex md:gap-3 lg:gap-10">
+        <nav className="hidden md:flex md:gap-3 lg:gap-10">
           <Link to="/" className={selectedTab === 'news' ? 'underline' : ''}>
             News
           </Link>
@@ -152,11 +151,11 @@ function Header() {
           >
             Sports
           </Link>
-        </div>
+        </nav>
 
         <form className="flex gap-2 items-center" onSubmit={handleSearch}>
           <label htmlFor="searchInput" className="sr-only">
-            Search
+            Search Query
           </label>
           <input
             type="search"
@@ -167,7 +166,7 @@ function Header() {
             className="p-1 rounded-lg"
           ></input>
 
-          <button aria-label="search button">
+          <button type="submit" aria-label="Search">
             <i className="fa-solid fa-magnifying-glass text-base cursor-pointer"></i>
           </button>
         </form>

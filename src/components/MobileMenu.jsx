@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function MobileMenu({ selectedTab }) {
   return (
-    <div className="absolute z-[1] top-24 left-0 w-full bg-white flex items-center p-5 flex-col gap-6">
+    <nav className="absolute z-[1] top-24 left-0 w-full bg-white flex items-center p-5 flex-col gap-6">
       <Link to="/" className={selectedTab === 'news' ? 'underline' : ''}>
         News
       </Link>
@@ -30,7 +30,7 @@ function MobileMenu({ selectedTab }) {
       >
         Sports
       </Link>
-    </div>
+    </nav>
   );
 }
 

@@ -2,16 +2,16 @@ import { formatDate } from '../utils/utils';
 
 function MiniArticle({ article }) {
   return (
-    <div className="flex gap-3">
+    <article className="flex gap-3">
       <div className="min-h-[120px] max-h-[120px] max-w-[190px] min-w-[190px] overflow-hidden rounded-lg">
         <img
           src={article.image}
-          alt="Placeholder for article content"
+          alt=""
           className="object-cover w-full h-full"
         ></img>
       </div>
       <div>
-        <p className="text-sm md:text-base text-gray-400">
+        <p className="text-sm md:text-base text-gray-600">
           Published {formatDate(article.published)}
         </p>
         <p>{article.author}</p>
@@ -24,7 +24,7 @@ function MiniArticle({ article }) {
           {article.title}
         </a>
       </div>
-    </div>
+    </article>
   );
 }
 

@@ -2,9 +2,9 @@ import { formatDate } from '../utils/utils';
 
 function TextArticle({ article }) {
   return (
-    <div className="flex flex-col gap-3">
+    <article className="flex flex-col gap-3">
       <div>
-        <p className="text-sm md:text-base text-gray-400">
+        <p className="text-sm md:text-base text-gray-500">
           Published {formatDate(article.published)}
         </p>
         <p>{article.author}</p>
@@ -17,7 +17,7 @@ function TextArticle({ article }) {
           {article.title}
         </a>
       </div>
-    </div>
+    </article>
   );
 }
 
