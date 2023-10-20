@@ -153,13 +153,17 @@ function Header() {
           </Link>
         </nav>
 
-        <form className="flex gap-2 items-center" onSubmit={handleSearch}>
+        <form
+          role="search"
+          className="flex gap-2 items-center"
+          onSubmit={handleSearch}
+        >
           <label htmlFor="searchInput" className="sr-only">
             Search Query
           </label>
           <input
-            type="search"
             id="searchInput"
+            type="search"
             value={searchParams.get('query') || ''}
             onChange={(e) => setSearchParams({ query: e.target.value })}
             placeholder="Search..."
